@@ -1,0 +1,46 @@
+.topBar{
+    padding: 5px;
+    .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2{
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        button{
+            width: 125px;
+            height: 50px;
+            border: none;
+            outline: none;
+            background-color: rgb(27, 206, 176);
+            color: rgb(54, 54, 54);
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .sort{
+        width: max-content;
+        height: min-content;
+        margin-top: 5px;
+        border: 1px solid rgb(97, 97, 97);
+        border-radius: 10px;
+        display: flex;
+
+        h4{
+            padding: 3px 7px;
+            border-right: 1px solid black;
+            cursor: pointer;
+
+            &:last-child{
+                border: none;
+            }
+        }
+
+    }
+}

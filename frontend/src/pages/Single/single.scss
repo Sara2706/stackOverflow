@@ -1,0 +1,59 @@
+.single{
+
+    .wrap{
+        margin-top: 10px;
+        display: flex;
+
+        .datas{
+            flex: 5;
+            .question{
+                padding: 5px;
+                background-color: rgb(228, 228, 228);
+                
+                h2{
+                    font-size: 30px;
+                }
+            }
+
+            .answers{
+                padding: 5px;
+                h3{
+                    font-size: 25px;
+                    font-weight: bold;
+                    margin: 15px 0 5px 0;
+                }
+            }
+
+            .postAnswer{
+                margin: 20px 0;
+                display: flex;
+                flex-direction: column;
+
+                label{
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+
+                textarea{
+                    resize: none;
+                    width: 98%;
+                    padding: 5px;
+                }
+
+                button{
+                    font-size: 15px;
+                    font-weight: bold;
+                    padding: 10px 15px;
+                    border-radius: 7px;
+                    cursor: pointer;
+                    margin-top: 5px;
+
+                    &:hover{
+                        background-color: black;
+                        color:white;
+                    }
+                }
+            }
+        }
+    }
+}

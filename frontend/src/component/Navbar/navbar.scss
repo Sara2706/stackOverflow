@@ -1,0 +1,80 @@
+.navbar {
+    padding: 2px 0;
+    height: 50px;
+    background-color: rgb(216, 216, 216);
+    -webkit-box-shadow: 0px 3px 12px 1px rgba(130, 130, 130, 1);
+    -moz-box-shadow: 0px 3px 12px 1px rgba(130, 130, 130, 1);
+    box-shadow: 0px 3px 12px 1px rgba(130, 130, 130, 1);
+    display: flex;
+
+    .logo{
+        flex: 3;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+
+        h5{
+            color: rgb(73, 73, 73);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logoImg{
+            width: 75px;
+        }
+    }
+
+    .search{
+        flex: 5;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        
+        .searchwrapper{
+            width: 100%;
+            position: relative;
+            background-color: white;
+            padding: 5px 0;
+            border: 1px solid rgb(78, 78, 78);
+            border-radius: 7px;
+            input{
+                padding: 5px 0px 5px 30px;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+            }
+            
+            button{
+                position: absolute;
+                left: 0;
+                top: 15%;
+                border: none;
+                outline: none;
+                color: black;
+                background: none;
+                font-size: 14px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .icons{
+        flex: 3;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .items{
+            margin: 0 3px ;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover{
+                color: white;
+                background-color: rgb(83, 83, 83);
+            }
+        }
+    }
+}

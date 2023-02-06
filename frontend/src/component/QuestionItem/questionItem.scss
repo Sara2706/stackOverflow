@@ -1,0 +1,33 @@
+.questionItem{
+    padding: 15px;
+    h3{
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        .link{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+    
+    .tagAndTime{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .tag{
+            display: flex;
+            align-items: center;
+            
+            h6{
+                font-size: 10px;
+                font-weight: 500;
+                padding: 5px 8px;
+                background-color: rgba(194, 194, 194, 0.836);
+                color: black;
+                border-radius: 2px;
+                margin: 0 3px;
+            }
+        }
+    }
+}

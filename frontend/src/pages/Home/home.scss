@@ -1,0 +1,17 @@
+.homeWrapper{
+
+    .wrap{
+        margin-top: 10px;
+        display: flex;
+
+        .sideBar{
+            position:fixed;
+            top:0;
+            background-color:black;
+        }
+
+        .questuins{
+            flex: 5;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.answer{
+    text-align: justify;
+
+    .top{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+
+        h6{
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+        }
+    }
+    p{
+        margin: 5px 0;
+    }
+}
