@@ -1,11 +1,12 @@
 .single{
 
     .wrap{
-        margin-top: 10px;
+        margin-top: 60px;
         display: flex;
 
         .datas{
             flex: 5;
+            margin-left: 21%;
             .question{
                 padding: 5px;
                 background-color: rgb(228, 228, 228);
@@ -53,6 +54,18 @@
                         color:white;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .single{
+        .wrap{
+            margin-top: 60px;
+    
+            .datas{
+                margin-left: 0%;
             }
         }
     }

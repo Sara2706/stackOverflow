@@ -1,17 +1,24 @@
 .homeWrapper{
 
     .wrap{
-        margin-top: 10px;
+        margin-top: 60px;
         display: flex;
-
-        .sideBar{
-            position:fixed;
-            top:0;
-            background-color:black;
-        }
 
         .questuins{
             flex: 5;
+            margin-left: 21%;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .homeWrapper{
+        .wrap{
+            margin-top: 60px;
+    
+            .questuins{
+                margin-left: 0%;
+            }
         }
     }
 }

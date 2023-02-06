@@ -1,13 +1,15 @@
 import './navbar.scss'
 import { Search, AccountCircle, Language } from '@material-ui/icons';
 import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 
-function Navbar({setSearch}) {
-    const searchData = (e) =>{
+function Navbar({ setSearch, setSideBar, sideBar }) {
+    const searchData = (e) => {
         const value = e.target.value;
-        if(value === '') return setSearch(null)
-        setSearch(value)
+        if (value === '') return setSearch(null)
+        setSearch(value.toLowerCase())
     }
     return (
         <div className='navbar'>
@@ -32,7 +34,17 @@ function Navbar({setSearch}) {
                 <div className="items">
                     < AccountCircle />
                 </div>
+                {sideBar ?
+                    <div className="menu" onClick={() => setSideBar(false)}>
+                        < CloseIcon className='icon' />
+                    </div> :
+                    <div className="menu" onClick={() => setSideBar(true)}>
+                        < MenuIcon className='icon' />
+                    </div>
+
+                }
             </div>
+
         </div>
     )
 }

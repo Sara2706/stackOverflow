@@ -10,6 +10,9 @@ import axios from 'axios';
 function Single() {
     const [answers, setAnswers] = useState([])
     const [answer, setMyAnswers] = useState(null)
+    const [search, setSearch] = useState(null)
+    const [sideBar, setSideBar] = useState(false)
+
     const location = useLocation();
     const data = location.state;
 
@@ -22,11 +25,11 @@ function Single() {
         }
         getAnswers();
 
-    },[])
+    }, [])
 
     const createAns = (e) => {
         const val = e.target.value;
-        setMyAnswers({[e.target.name]: val})
+        setMyAnswers({ [e.target.name]: val })
     }
 
     const postAnswer = async (e) => {
@@ -37,16 +40,16 @@ function Single() {
             }
         });
         const val = req.data
-        setAnswers([val,...answers])
+        setAnswers([val, ...answers])
         // setAnswers([...answers, val])
 
     }
 
     return (
         <div className='single'>
-            <Navbar />
+            <Navbar sideBar={sideBar} setSideBar={setSideBar} setSearch={setSearch} />
             <div className="wrap">
-                <Sidebar />
+                <Sidebar sideBar={sideBar} />
                 <div className="datas">
                     <div className="question">
                         <h2>{data.title}</h2>
@@ -57,7 +60,7 @@ function Single() {
                     </div>
                     <div className="answers">
                         <h3>Answers</h3>
-                        {answers.map((item,index) => {
+                        {answers.map((item, index) => {
                             return <Answers key={index} value={item} />
 
                         })}

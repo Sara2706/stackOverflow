@@ -4,9 +4,8 @@ import {  useContext } from 'react'
 import { AuthContext } from '../../context/AuthContext'
 import { logout } from '../../context/apiCalls';
 
-function Sidebar() {
+function Sidebar({sideBar}) {
   const {user,dispatch} = useContext(AuthContext);
-
   const handleLogout =() =>{
     try {
       localStorage.removeItem('user');
@@ -16,7 +15,7 @@ function Sidebar() {
     }
   }
   return (
-    <div className='sidebar'>
+    <div className={sideBar ?'sidebar visble' :'sidebar hidden'}>
         <Link className='link' to='/'>Home</Link>
         <h4>
           Questions

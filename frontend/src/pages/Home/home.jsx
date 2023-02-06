@@ -10,22 +10,25 @@ function Home() {
   const [questions, setQuestions] = useState([])
   const [sort, setSort] = useState(null)
   const [search, setSearch] = useState(null)
-  useEffect(()=>{
-    const getQuestions = async() => {
-      const res = await axios.get(`question/?${sort ? `sort=${sort}`:''}${search ? `&search=${search}` : ''}`)
+  const [sideBar, setSideBar] = useState(false)
+
+  useEffect(() => {
+    const getQuestions = async () => {
+      const res = await axios.get(`question/?${sort ? `sort=${sort}` : ''}${search ? `&search=${search}` : ''}`)
       setQuestions(res.data)
     }
     getQuestions();
-  },[sort,search])
+  }, [sort, search])
   return (
     <div className='homeWrapper'>
-      <Navbar setSearch={setSearch}/>
+      <Navbar sideBar={sideBar} setSideBar={setSideBar} setSearch={setSearch} />
       <div className="wrap">
-        <Sidebar className='sideBar'/>
+        <Sidebar sideBar={sideBar} />
+
         <div className="questuins">
-          <TopBar setSort={setSort}/>
+          <TopBar setSort={setSort} />
           <hr />
-          <QuestionList questions={questions}/>
+          <QuestionList questions={questions} />
         </div>
       </div>
     </div>

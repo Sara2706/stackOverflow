@@ -19,14 +19,14 @@ router.post('/', verify, async (req, res) => {
 })
 
 router.get('/', async (req, res) => {
-    const sort = req.query.sort.toLowerCase();
+    const sort = req.query.sort;
     const search = req.query.search;
     let allQuestion;
     try {
         if (sort) {
             if (sort === 'nto') {
                 if (search) {
-                    allQuestion = await question.find({tag:search}).sort({ _id: -1 }).limit(10)
+                    allQuestion = await question.find({tag:{$regex : search.toString()}}).sort({ _id: -1 }).limit(10)
                     res.status(200).json(allQuestion)
                 } else {
                     allQuestion = await question.find().sort({ _id: -1 }).limit(10)
